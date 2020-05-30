@@ -1,0 +1,17 @@
+.footer {
+  grid-area: "ft";
+  text-align: center;
+  padding: 40px;
+  background: #2a9d8f;
+}
+
+.footer img {
+  max-width: 40px;
+  display: inline;
+}
+
+.footer a {
+  text-align: center;
+  padding: 0;
+  background: none;
+}

@@ -1,0 +1,122 @@
+button {
+  align-content: center;
+  padding: 10px;
+  margin: 10px;
+}
+
+button:hover {
+  background: gray;
+  cursor: pointer;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  grid-area: "nav";
+  margin: 0 40px 0 40px;
+}
+
+a {
+  text-align: center;
+  padding: 20px;
+  background: #f4a261;
+  text-decoration: none;
+}
+
+a:hover {
+  background: #e9c46a;
+  cursor: pointer;
+}
+
+h2, p {
+  text-align: center;
+  margin: 0;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: .5fr 1.2fr 8fr .5fr;
+  grid-template-columns: 1fr;
+  grid-template-areas: "hd" "nav" "main" "ft";
+  justify-content: space-around;
+}
+
+.cards {
+  grid-area: "main";
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0 0 40px 0;
+}
+
+.cards-grid {
+  display: flex;
+  flex-direction: column;
+  grid-area: "main";
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background: #e76f51;
+  border-radius: 10px;
+  padding: 5px;
+  margin: 0 0 20px 0;
+}
+
+.card a {
+  text-align: center;
+  padding: 0;
+  background: none;
+}
+
+.card img {
+  max-width: 200px;
+  margin: 10px auto 0 auto;
+  padding: 0 0 0 0;
+  border: 2px solid white;
+}
+
+@media(min-width: 600px) {
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .container {
+    display: grid;
+    grid-template-rows: .5fr .5fr 8fr .5fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: "hd" "nav" "main" "ft";
+  }
+
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    grid-template-rows: 33% 33% 33%;
+    justify-content: center;
+    grid-gap: 20px;
+  }
+}
+
+@media(min-width: 1000px) {
+  nav {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .container {
+    display: grid;
+    grid-template-rows: .5fr .5fr 6fr .5fr;
+    grid-template-columns: 1fr;
+  }
+
+  .cards-grid {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 50% 50%;
+    grid-gap: 40px;
+  }
+}
